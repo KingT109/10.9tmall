@@ -166,37 +166,37 @@ window.onscroll=function () {
     }
 }
 
-// //天猫超市的选项卡
-// var goodsOpts=document.querySelectorAll(".goods-opts .goods-opt");
-// var goodsCons=document.querySelectorAll(".goods-cons .goods-con");
+//天猫超市的选项卡
+var goodsOpts=document.querySelectorAll(".goods-opts .goods-opt");
+var goodsCons=document.querySelectorAll(".goods-cons .goods-con");
 
-// for(var i=0;i<goodsOpts.length;i++){
-//     goodsOpts[i].index=i;
-//     goodsOpts[i].onclick=function(){
-//         for(var i=0;i<goodsOpts.length;i++){
-//             goodsOpts[i].style.background="#f2f2f2";
-//         }
-//         this.style.background="#00b262";
-//         for(var j=0;j<goodsCons.length;j++){
-//             goodsCons[j].style.display="none";
-//         }
-//         goodsCons[this.index].style.display='block';
-//     }
-// }
-// function tab(opts,conts,type="onmouseover",color="#00b262") {
-//     for(var i=0;i<goodsOpts.length;i++){
-//         opts[i].index=i;
-//         opts[i][type]=function () {
-//             for(var j=0;j<goodsCons.length;j++){
-//                 if(this.index==j){
-//                     opts[j].style.background=color;
-//                     conts[j].style.display="block";
-//                 }else{
-//                     opts[j].style.background="#f2f2f2";
-//                     conts[j].style.display="none";
-//                 }
-//             }
-//         }
-//     }
-// }
-// tab(goodsOpts,goodsCons);
+for(var i=0;i<goodsOpts.length;i++){
+    goodsOpts[i].index=i;
+    goodsOpts[i].onclick=function(){
+        for(var i=0;i<goodsOpts.length;i++){
+            goodsOpts[i].style.background="#f2f2f2";
+        }
+        this.style.background="#00b262";
+        for(var j=0;j<goodsCons.length;j++){
+            goodsCons[j].style.display="none";
+        }
+        goodsCons[this.index].style.display='block';
+    }
+}
+function tab(opts,conts,type="onmouseover",color="#00b262") {
+    for(var i=0;i<goodsOpts.length;i++){
+        opts[i].index=i;
+        opts[i][type]=function () {
+            for(var j=0;j<goodsCons.length;j++){
+                if(this.index==j){
+                    opts[j].style.background=color;
+                    conts[j].style.display="block";
+                }else{
+                    opts[j].style.background="#f2f2f2";
+                    conts[j].style.display="none";
+                }
+            }
+        }
+    }
+}
+tab(goodsOpts,goodsCons);
